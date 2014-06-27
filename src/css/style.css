@@ -1,0 +1,249 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;   
+}
+body {
+  font: normal 14px Roboto,arial,sans-serif;
+  background-color: #e0e0e0;
+  -webkit-user-select: none;
+}
+
+/*  TITLEBAR  */
+
+.titlebar {
+  background: -webkit-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 43px, #6A6A6A 1px, #EDEDED, #EDEDED 44px);
+  height: 44px;
+  width: 100%;
+  -webkit-app-region: drag;
+  cursor: default;
+  position: fixed;
+  z-index: 100;
+}
+.title-buttons {
+  position: fixed;
+  top: 4px;
+  left: 4px;
+}
+.fl {float:left;}
+.divider {
+  height: 34px;
+  width: 1px;
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+.title-button {
+  margin: 0;
+  width: 14px;
+  height: 34px;
+  -webkit-app-region: no-drag;
+}
+.title-button:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+.button-quit {background: no-repeat url(../img/window-controls.png) 0 0;}
+.button-quit:hover {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) 0 0;
+}
+.button-quit:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) 0 0;
+}
+.button-quit-no, .button-quit-no:hover, .button-quit-no:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) 0 -34px;
+}
+.button-mini {background: no-repeat url(../img/window-controls.png) -14px 0;}
+.button-mini:hover {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -14px 0;
+}
+.button-mini:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -14px 0;
+}
+.button-mini-no, .button-mini-no:hover, .button-mini-no:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -14px -34px;
+}
+.button-full {background: no-repeat url(../img/window-controls.png) -28px 0;}
+.button-full:hover {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -28px 0;
+}
+.button-full:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -28px 0;
+} 
+.button-full-no, .button-full-no:hover, .button-full-no:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%), no-repeat url(../img/window-controls.png) -28px -34px;
+} 
+.title-navs {
+  position: fixed;
+  top: 4px;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  color: rgba(0,0,0,0.75);
+}
+.title-navs-cont {
+  display: inline-block;
+  -webkit-app-region: no-drag;
+}
+.title-nav {
+  font: 300 15px/34px Roboto,arial,sans-serif;
+  padding: 0 4px;
+}
+.title-nav:hover {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%);
+}
+.title-nav:active {
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+.title-nav-selected, .title-nav-selected:hover, .title-nav-selected:active {
+  font: 300 15px/34px Roboto,arial,sans-serif;
+  padding: 0 4px;
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%);
+  color: rgba(255,255,255,0.75);
+}
+
+/* ALL PAGES */
+
+.cont-home, .cont-conj, .cont-less, .cont-user {display:none;}
+
+
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 44px 15px 0;
+}
+
+/* BLOCK LAYOUT */
+
+.column {
+  width: 33.33333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}
+.column h3 {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  padding: 6px 0 6px 0;
+  position: sticky;
+  top: 48px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  margin-left: 10%;
+  width: 80%;
+  background-color: rgba(224, 224, 224, 0.6);
+  border-radius: 3px;
+  border: 1px solid rgba(224, 224, 224, 0.9);
+  display: block;
+  z-index: 1;
+}
+.panel {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-color: #d2d2d2;
+  box-shadow: 0 1px 0 #cfcfcf;
+  border-radius: 3px;
+  cursor: pointer;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transition: background-color,bottom 250ms ease;
+}
+.panel:hover {
+  bottom: 4px;
+  background-color: #f3f3f3;
+}
+.panel-head {
+  padding: 10px 15px 0 15px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #262626;
+  border-color: #ffffff;
+}
+
+.panel-meta {
+  font-weight: 400;
+  font-size: 11px;
+  float: right;
+  font-style: italic;
+  color: #999;
+}
+
+.panel-head h4 {
+  border: 0 solid #cfcfcf;
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+}
+
+.panel-body {
+  padding: 10px 15px 15px 15px;
+}
+
+.action-button {
+  display: block;
+  font: 400 16px Roboto,arial,sans-serif;
+  color: #ffffff;
+  margin: 14px 0 0 0;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid #006aba;
+  padding: 8px;
+  background-color: #0496ff;
+  -webkit-transition: background-color 250ms ease;
+}
+
+.panel:hover .action-button {
+  background-color: #007edd;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+  .column {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+@media (min-width: 1800px) {
+  .container {
+    padding-left: 138px;
+    padding-right: 138px;
+  }
+  .column {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* LESSON PAGE */
+
+
+.tense-desc {
+  border: 0 solid #cfcfcf;
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+}
+.tense-examples {
+  border: 0 solid #cfcfcf;
+  border-bottom-width: 1px;
+  padding: 10px 0;
+  height: 50px;
+}
+.tense-examples div {
+  display: inline-block;
+}
+.tense-examples .pronoun {
+  width: 100px;
+  font: 300 14px Roboto,arial,sans-serif;
+  line-height: 30px;
+  text-align: right;
+  border: 0 solid #cfcfcf;
+  border-right-width: 1px;
+  padding-right: 2px;
+}
+.tense-examples .verb {
+  font: 500 16px Roboto,arial,sans-serif;
+}

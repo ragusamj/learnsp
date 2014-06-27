@@ -1,0 +1,13 @@
+{
+  "name": "LearnSP Desktop",
+  "main": "index.html",
+  "chromium-args": "--enable-experimental-web-platform-features",
+  "window": {
+    "title": "Loading...",
+    "frame": false,
+    "width": 1000,
+    "height": 800,
+    "min_width": 1000,
+    "min_height": 800
+  }
+}
