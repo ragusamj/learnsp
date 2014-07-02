@@ -5,6 +5,7 @@
   "window": {
     "title": "Loading...",
     "frame": false,
+    "toolbar": false,
     "width": 1000,
     "height": 800,
     "min_width": 1000,

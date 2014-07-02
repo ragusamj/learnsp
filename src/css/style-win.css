@@ -1,0 +1,123 @@
+.titlebar {
+  background: none;
+  background-color: #54AFFF;
+}
+.button-quit {
+  position: fixed;
+  top: 0;
+  width: 54px;
+  height: 20px;
+  right: 4px;
+  background: none;
+  background-color: #C75050;
+}
+.button-quit:hover {
+  background: none;
+  background-color: #d65353;
+}
+.button-quit:active {
+  background: none;
+  background-color: #993131;
+}
+.button-mini, .button-mini-no {right: 100px;}
+.button-full {right: 56px;}
+.button-mini, .button-mini-no, .button-full {
+  position: fixed;
+  top: 0;
+  width: 44px;
+  height: 20px;
+  background: none;
+  background-color: #54AFFF;
+}
+.button-mini:hover, .button-full:hover {
+  background: none;
+  background-color: #68b7fc;
+}
+.button-mini:active, .button-full:active {
+  background: none;
+  background-color: #1e8eed;
+}
+.button-mini-no, .button-mini-no:hover, .button-mini-no:active {
+  background: none;
+  background-color: #54AFFF;
+}
+
+.icon-quit {
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+}
+.icon-quit:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+}
+.icon-quit:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+}
+.icon-full {
+  width: 10px;
+  height: 8px;
+  top: 6px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid #000;
+  border-top-width: 2px;
+}
+.icon-mini {
+  width: 10px;
+  height: 8px;
+  top: 6px;
+  margin: 0 auto;
+  position: relative;
+  border: 0 solid #000;
+  border-bottom-width: 2px;
+}
+.button-mini-no .icon-mini {
+  width: 10px;
+  height: 8px;
+  top: 6px;
+  margin: 0 auto;
+  position: relative;
+  border: 0 solid rgba(0, 0, 0, 0.25);
+  border-bottom-width: 2px;
+}
+
+
+.divider {
+  display: none;
+}
+.title-navs {
+  top: 2px;
+}
+.title-nav {
+  margin: 0 inherit;
+  color: rgba(1,1,1,0.75);
+  height: 40px;
+  line-height: 38px;
+}
+.title-nav:hover {
+  background: none;
+  background-color: #68b7fc;
+}
+.title-nav:active {
+  background: none;
+  background-color: #1e8eed;
+}
+.title-nav-selected, .title-nav-selected:hover, .title-nav-selected:active {
+  background: none;
+  background-color: #1979CA;
+  line-height: 38px;
+  color: rgba(255,255,255,0.75);
+}

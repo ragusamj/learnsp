@@ -5,18 +5,28 @@
   <link rel="stylesheet" type="text/css" href="css/lib/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/font.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+  <!-- WIN8 Titlebar theme -- > 
+  <link rel="stylesheet" type="text/css" href="css/style-win.css" /> <!-- -->
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body>
+  
   <div class="titlebar">
     <div class="title-buttons">
       <div class="fl divider"></div>
-      <div class="fl title-button button-quit" id="button-quit"></div>
+      <div class="fl title-button button-quit" id="button-quit">
+        <div class="icon-quit"></div>
+      </div>
       <div class="fl divider"></div>
-      <div class="fl title-button button-mini" id="button-mini"></div>
+      <div class="fl title-button button-mini" id="button-mini">
+        <div class="icon-mini"></div>
+      </div>
       <div class="fl divider"></div>
-      <div class="fl title-button button-full" id="button-full"></div>
+      <div class="fl title-button button-full" id="button-full">
+        <div class="icon-full"></div>
+      </div>
       <div class="fl divider"></div>
     </div>
     <div class="title-navs">
@@ -35,36 +45,43 @@
   </div>
   
   <div class="container cont-home">
-    <div class="column-2">
+    <div class="column padleft padright">
       <div class="panel">
         <div class="panel-head">
-          <div class="panel-meta">hi</div>
-          <h4>hello</h4>
+          <h2>
+            <span id="gen-welc">Welcome&hellip; <a href="#">Who are you?</a></span>
+            <span id="pers-welc">Welcome, <span class="usrnm">{name}</span>!</span>
+          </h2>
         </div>
         <div class="panel-body">
-          content of a big one!
+          Visit the <a href="#">User Area</a> to edit your profile, add or remove yourself from LearnSP classes [NYI], and see other personal details. 
         </div>
       </div>
     </div>
-    <div class="column-4">
+    <div class="column-2 padleft padright">
       <div class="panel">
         <div class="panel-head">
-          <div class="panel-meta">hi</div>
-          <h4>hello</h4>
+          <div class="panel-meta">View all (<span id="saved-cnj-count">{count}</span>)</div>
+          <h4>My saved Conjugator setups</h4>
         </div>
         <div class="panel-body">
-          content of a little one!
-        </div>
-      </div>
-    </div>
-    <div class="column-4">
-      <div class="panel">
-        <div class="panel-head">
-          <div class="panel-meta">hi</div>
-          <h4>hello</h4>
-        </div>
-        <div class="panel-body">
-          moar little one!
+          <table class="cnj-set" width="100%">
+            <tr>
+              <th>Times</th>
+              <th>Best</th>
+              <th>Name</th>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>92%</td>
+              <td>Regular -ar verbs in Preterite tense</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>92%</td>
+              <td>Regular -ar verbs in Preterite tense</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
@@ -73,7 +90,7 @@
   <div class="container cont-conj"> -conjugator- </div>
   
   <div class="container cont-less">
-    <div class="column">
+    <div class="column padleft padright">
       <div class="panel">
         <div class="panel-head">
           <h2>Lessons</h2>
@@ -83,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div class="column-3">
+    <div class="column-3 padleft padright">
       <h3>Indicative</h3>
       <div class="panel">
         <div class="panel-head">
@@ -166,7 +183,7 @@
         </div>
       </div>
     </div>
-    <div class="column-3">
+    <div class="column-3 padleft padright">
       <h3>Subjunctive</h3>
       <div class="panel">
         <div class="panel-head">
@@ -233,7 +250,7 @@
         </div>
       </div>
     </div>
-    <div class="column-3">
+    <div class="column-3 padleft padright">
       <h3>Other</h3>
       <div class="panel">
         <div class="panel-head">
@@ -303,5 +320,7 @@
   </div>
   
   <div class="container cont-user"> -user area- </div>
+  
+  <div class="window-frame"></div>
 </body>
 </html>

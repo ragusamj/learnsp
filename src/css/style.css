@@ -11,7 +11,7 @@ body {
 /*  TITLEBAR  */
 
 .titlebar {
-  background: -webkit-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 43px, #6A6A6A 1px, #EDEDED, #EDEDED 44px);
+  background: -webkit-linear-gradient(#e9e9e9, #b2b2b2);
   height: 44px;
   width: 100%;
   -webkit-app-region: drag;
@@ -72,8 +72,8 @@ body {
 .title-navs {
   position: fixed;
   top: 4px;
-  left: 10%;
-  width: 80%;
+  left: 15%;
+  width: 70%;
   text-align: center;
   color: rgba(0,0,0,0.75);
 }
@@ -98,11 +98,42 @@ body {
   color: rgba(255,255,255,0.75);
 }
 
+
 /* ALL PAGES */
 
-.cont-home, .cont-conj, .cont-less, .cont-user {display:none;}
+.cont-homme, .cont-conj, .cont-less, .cont-user {display:none;}
 
+table tr:not(:last-child) {
+  border-bottom: 1px solid #cfcfcf;
+}
+table td:not(:last-child) {
+  border-right: 1px dashed #cfcfcf;
+}
+.cnj-set th:not(:last-child) {
+  border-right: 1px dashed #fff;
+}
+table td, table th {
+  padding: 4px;
+}
+table th {
+  background-color: #cfcfcf;
+}
+table th:first-child {
+  border-top-left-radius: 4px;
+}
+table th:last-child {
+  border-top-right-radius: 4px;
+}
 
+a {
+  color: #0b85ef;
+  text-decoration-color: transparent;
+  -webkit-transition: all 300ms;
+}
+a:hover {
+  color: #005db2;
+  text-decoration-color: currentColor;
+}
 
 .container {
   margin-right: auto;
@@ -118,9 +149,13 @@ body {
 .column-4 {width: 25%;}
 
 .column, .column-2, .column-3, .column-4 {
-  padding-left: 15px;
-  padding-right: 15px;
   float: left;
+}
+.padleft {
+  padding-left: 15px;
+}
+.padright {
+  padding-right: 15px;
 }
 .column h3, .column-2 h3, .column-3 h3, .column-4 h3 {
   font-size: 22px;
@@ -207,14 +242,25 @@ body {
   background-color: #007edd;
 }
 
+.panel-large {
+  width: 90%;
+  margin-left: 5%;
+}
+
 @media (min-width: 1400px) {
   .container {
     padding-left: 88px;
     padding-right: 88px;
   }
-  .column, .column-2, .column-3, .column-4 {
+  .padleft {
     padding-left: 38px;
+  }
+  .padright {
     padding-right: 38px;
+  }
+  .panel-large {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1800px) {
@@ -222,13 +268,20 @@ body {
     padding-left: 138px;
     padding-right: 138px;
   }
-  .column .column-2, .column-3, .column-4 {
+  .padleft {
     padding-left: 48px;
+  }
+  .padright {
     padding-right: 48px;
   }
 }
 
-/* LESSON PAGE */
+/*  HOME PAGE  */
+
+
+
+
+/*  LESSON PAGE  */
 
 
 .panel input {
