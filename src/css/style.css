@@ -109,7 +109,7 @@ table tr:not(:last-child) {
 table td:not(:last-child) {
   border-right: 1px dashed #cfcfcf;
 }
-.cnj-set th:not(:last-child) {
+table th:not(:last-child) {
   border-right: 1px dashed #fff;
 }
 table td, table th {
@@ -124,16 +124,25 @@ table th:first-child {
 table th:last-child {
   border-top-right-radius: 4px;
 }
+table td:last-child a.hidden:hover:after {
+  content: '\3009';
+  position: absolute;
+  right: 12px;
+}
 
 a {
   color: #0b85ef;
   text-decoration-color: transparent;
-  -webkit-transition: all 300ms;
+  -webkit-transition: all 250ms;
 }
-a:hover {
+a:hover, a.hidden:hover {
   color: #005db2;
   text-decoration-color: currentColor;
 }
+a.hidden {
+  color: inherit;
+}
+
 
 .container {
   margin-right: auto;

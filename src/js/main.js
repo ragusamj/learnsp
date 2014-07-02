@@ -125,3 +125,17 @@ function updateView() {
     }).addClass('cont-visible');
   }).removeClass('cont-visible');
 }
+function store(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+  return retrieve(key);
+}
+function retrieve(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+function destroy(key) {
+  try {
+    localStorage.removeItem(key);
+  } catch(err) {
+    return err;
+  }
+}
