@@ -101,7 +101,7 @@ body {
 
 /* ALL PAGES */
 
-.cont-homme, .cont-conj, .cont-less, .cont-user {display:none;}
+.cont-home, .cont-conj, .cont-less, .cont-user {display:none;}
 
 table tr:not(:last-child) {
   border-bottom: 1px solid #cfcfcf;
@@ -183,6 +183,10 @@ a.hidden {
   display: block;
   z-index: 1;
 }
+.section {
+  width: 100%;
+  float: left;
+}
 .panel {
   position: relative;
   margin-bottom: 20px;
@@ -206,7 +210,7 @@ a.hidden {
   font-weight: 500;
   font-size: 18px;
   color: #262626;
-  border-color: #ffffff;
+  border-color: #fff;
 }
 
 .panel-meta {
@@ -237,7 +241,7 @@ a.hidden {
 .action-button {
   display: block;
   font: 400 16px Roboto,arial,sans-serif;
-  color: #ffffff;
+  color: #fff;
   margin: 14px 0 0 0;
   border-radius: 3px;
   text-align: center;
@@ -246,14 +250,17 @@ a.hidden {
   background-color: #0496ff;
   -webkit-transition: background-color 250ms ease;
 }
+.action-button.subtle {
+  background-color: #ccc;
+  border-color: #aaa;
+  color: #000;
+}
 
 .panel:hover .action-button {
   background-color: #007edd;
 }
-
-.panel-large {
-  width: 90%;
-  margin-left: 5%;
+.panel:hover .action-button.subtle {
+  background-color: #bbb;
 }
 
 @media (min-width: 1400px) {
@@ -266,10 +273,6 @@ a.hidden {
   }
   .padright {
     padding-right: 38px;
-  }
-  .panel-large {
-    width: 1200px;
-    margin: 0 auto;
   }
 }
 @media (min-width: 1800px) {
@@ -316,17 +319,13 @@ a.hidden {
   border-radius:3px;
   background: #cfcfcf;
   -webkit-transform: none;
-  -webkit-transition: -webkit-transform 400ms ease-out;
+  -webkit-transition: all 400ms ease-out;
 }
 .panel input::-webkit-search-cancel-button:hover{
-  position:relative;
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius:3px;
-  -webkit-transform: rotate(225deg)
+  background-color: #d05454;
+  border-radius: 50%;
+  -webkit-transform: rotate(135deg)
 }
-
 .tense-desc {
   border: 0 solid #cfcfcf;
   border-bottom-width: 1px;
@@ -351,5 +350,5 @@ a.hidden {
   padding-right: 2px;
 }
 .tense-examples .verb {
-  font: 500 16px Roboto,arial,sans-serif;
+  font: 500 16px/30px Roboto,arial,sans-serif;
 }

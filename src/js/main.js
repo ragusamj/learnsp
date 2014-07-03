@@ -1,20 +1,9 @@
 var main = {};
 $(document).ready(function() {
   var gui = require('nw.gui'), win = gui.Window.get(), menubar = new gui.Menu({ type: 'menubar' }), menu = {
-    file: new gui.Menu(),
     go: new gui.Menu(),
     help: new gui.Menu()
   };
-  
-  
-  // MENU SETUP
-  
-//  menu.file.append(new gui.MenuItem({
-//    label: 'New',
-//    click: function () {
-//      gui.Window.open('index.html');
-//    }
-//  }));
 
   menu.help.append(new gui.MenuItem({
     label: 'Not Available.',
@@ -25,24 +14,30 @@ $(document).ready(function() {
   }));
 
   menu.go.append(new gui.MenuItem({
-    label: 'Conjugator'
+    label: 'Home',
+    click: function(){$('#nav-home').click()}
   }));
   menu.go.append(new gui.MenuItem({
-    label: 'Lessons'
+    label: 'Conjugator',
+    click: function(){$('#nav-conj').click()}
   }));
   menu.go.append(new gui.MenuItem({
-    label: 'Support'
+    label: 'Lessons',
+    click: function(){$('#nav-less').click()}
   }));
   menu.go.append(new gui.MenuItem({
-    label: 'Profile',
-    enabled: false
+    label: 'User Area',
+    click: function(){$('#nav-user').click()}
   }));
   
   menubar.append(new gui.MenuItem({ label: 'Go', submenu: menu.go}));
 
   win.menu = menubar;
-  win.menu.insert(new gui.MenuItem({ label: 'File', submenu: menu.file}), 1);
   win.menu.append(new gui.MenuItem({ label: 'Help', submenu: menu.help}));
+  
+  
+  var tray = new gui.Tray({ title: 'SP'});
+  tray.menu = menu.go;
   
   // WINDOW CONTROLS
   
